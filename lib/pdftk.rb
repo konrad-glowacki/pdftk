@@ -15,16 +15,17 @@ class Pdftk
   @@config = {}
   cattr_accessor :config
 
-  def initialize(source_array, destination_path)
-    @exe_path = find_binary_path
-    @source_files = source_array
-    @merged_file_path =  destination_path
+  def initialize(execute_path = nil)
+    @exe_path = execute_path || find_binary_path
     raise "Location of #{EXE_PATH} unknow" if @exe_path.empty?
     raise "Bad location of #{EXE_PATH}'s path" unless File.exists?(@exe_path)
     raise "#{EXE_PATH} is not executable" unless File.executable?(@exe_path)
   end
 
-  def merge
+  def merge(source_array, destination_path)
+    @source_files = source_array
+    @merged_file_path =  destination_path
+
     command = "#{@exe_path} #{@source_files.join(' ')} cat output #{@merged_file_path}"
     err = Open3.popen3(command) do |stdin, stdout, stderr|
       stderr.read

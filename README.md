@@ -5,7 +5,7 @@ Pdftk is gem for merging pdf files with pdftk library for Rails.
 
 ### Installation
 
- Configure it in an initializer:
+Configure it in an initializer:
     Pdftk.config = {
       :exe_path => '/usr/local/bin/pdftk'
     }
@@ -23,6 +23,5 @@ or add this to your Gemfile:
 
 Is a example of usage:
 
-    pdftk  = Pdftk.new(array_with_files_path_to_merging, output_file)
-    result = pdftk.merge
+    pdf = Pdftk.new.merge(array_with_files_path_to_merging, output_file_path)
 
