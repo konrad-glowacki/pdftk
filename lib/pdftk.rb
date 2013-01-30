@@ -17,9 +17,9 @@ class Pdftk
 
   def initialize(execute_path = nil)
     @exe_path = execute_path || find_binary_path
-    raise "Location of #{EXE_PATH} unknow" if @exe_path.empty?
-    raise "Bad location of #{EXE_PATH}'s path" unless File.exists?(@exe_path)
-    raise "#{EXE_PATH} is not executable" unless File.executable?(@exe_path)
+    raise "Location of #{EXE_NAME} unknow" if @exe_path.empty?
+    raise "Bad location of #{EXE_NAME}'s path" unless File.exists?(@exe_path)
+    raise "#{EXE_NAME} is not executable" unless File.executable?(@exe_path)
   end
 
   def merge(source_array, destination_path)
