@@ -12,16 +12,17 @@ Pdftk is gem for merging pdf files with pdftk library for Rails.
 
 Next:
 
-    script/plugin install git://github.com/webkrak/pdftk.git
-    script/generate pdftk
+  script/plugin install git://github.com/webkrak/pdftk.git
+  script/generate pdftk
 
 or add this to your Gemfile:
 
-    gem 'pdftk'
+  gem 'pdftk'
 
 ### Basic Usage
 
+Is a example of usage:
 
-pdftk  = Pdftk.new(array_with_files_path_to_merging, output_file)
-result = pdftk.merge
+  pdftk  = Pdftk.new(array_with_files_path_to_merging, output_file)
+  result = pdftk.merge
 
