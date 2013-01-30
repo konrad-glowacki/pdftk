@@ -1,6 +1,6 @@
 Gem::Specification.new do |g|
   g.name = 'pdftk'
-  g.version = '0.0.2'
+  g.version = '0.0.3'
   g.date = '2013-01-30'
   g.summary = 'Pdftk library for Rails'
   g.description = 'Pdftk library is used for merging diffrent pdf files.'
