@@ -7,7 +7,7 @@ Gem::Specification.new do |g|
   g.authors = ['Konrad Glowacki']
   g.email = 'konrad.glowacki@gmail.com'
   g.homepage = 'https://github.com/webkrak'
-  g.files = %w(README.md Rakefile)
+  g.files = %w(README.md)
   g.files += Dir.glob("{lib,generators}/**/*")
   g.require_paths = ['lib']
   g.add_dependency('rails')
